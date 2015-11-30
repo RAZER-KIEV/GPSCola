@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Current Location:"
+            android:id="@+id/notifTV"
+            android:layout_above="@+id/progressBar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="86dp" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btnLocationSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickLocationSettings"
+            android:text="@string/location_settings"
+            android:layout_gravity="bottom"
+            android:layout_below="@+id/button2"
+            android:layout_centerHorizontal="true">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UnBind"
+            android:id="@+id/button2"
+            android:onClick="goToBinder"
+            android:nestedScrollingEnabled="true"
+            android:layout_below="@+id/btnStop"
+            android:layout_alignLeft="@+id/btnStop"
+            android:layout_alignStart="@+id/btnStop" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Map"
+            android:id="@+id/toMap"
+            android:nestedScrollingEnabled="true"
+            android:layout_below="@+id/btnStart"
+            android:layout_alignRight="@+id/btnStart"
+            android:layout_alignEnd="@+id/btnStart"
+            android:onClick="toMap" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickStart"
+            android:text="@string/start"
+            android:layout_alignTop="@+id/btnStop"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+        </Button>
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickStop"
+            android:text="@string/stop"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+        </Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Latitude:"
+            android:id="@+id/textView"
+            android:layout_marginTop="31dp"
+            android:layout_alignTop="@+id/notifTV"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Longitude:"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="curLat"
+            android:id="@+id/curLat"
+            android:layout_alignTop="@+id/textView"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="curLong"
+            android:id="@+id/curLong"
+            android:layout_below="@+id/curLat"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="locationUpdate"
+            android:id="@+id/locationUpdate"
+            android:layout_below="@+id/btnLocationSettings"
+            android:layout_toLeftOf="@+id/button2"
+            android:layout_toStartOf="@+id/button2"
+            android:nestedScrollingEnabled="false"
+            android:onClick="locationUpdate" />
+    </RelativeLayout>
+
+</LinearLayout>

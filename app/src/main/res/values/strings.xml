@@ -1,0 +1,17 @@
+<resources>
+    <string name="start">Start service</string>
+    <string name="stop">Stop service</string>
+    <string name="app_name">GPSCola</string>
+    <string name="provider_gps">GPS</string>
+    <string name="provider_network">Network</string>
+    <string name="location_settings">Location settings</string>
+    <string name="action_setting">action_setting</string>
+    <string name="format_short">Short</string>
+    <string name="format_long">Long</string>
+    <string name="get_time">Get time</string>
+    <string name="observer">Observer</string>
+    <string name="goToAsyncLoader">goToAsyncLoader</string>
+    <string name="bind">Bind</string>
+    <string name="unbind">Unbind</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
